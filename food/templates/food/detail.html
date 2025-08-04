@@ -1,0 +1,19 @@
+{% extends "food/base.html" %}
+
+{% block body %}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="{{ item.item_image }}" alt="{{ item.item_name }}" class="img-fluid rounded" style="height: 300px; object-fit: cover;">
+        </div>
+
+        <div class="col-md-6">
+            <h1>{{ item.item_name }}</h1>
+            <h2>{{ item.item_desc }}</h2>
+            <h3>Price: ₹{{ item.item_price }}</h3>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
