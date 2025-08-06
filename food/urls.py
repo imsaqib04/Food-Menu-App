@@ -4,13 +4,14 @@ from django.urls import path
 app_name  = 'food'
 urlpatterns = [
     #/food/
-    path("",views.index,name = "index"),
-    #/food/1
-    path("<int:item_id>/",views.details,name = "detail"),
+    path("",views.IndexClassView.as_view(),name = "index"),
+    #/food/1  ## detail
+    path("<int:pk>/",views.FoodDetail.as_view(),name = "detail"),
+    ## item
     path("item/",views.item,name = "item"),
 
     # add item
-    path("add/",views.create_item,name = "create_item"),
+    path("add/",views.CreateItem.as_view(),name = "create_item"),
     
     #edit
     path('update/<int:id>/',views.update_item,name = 'update_item'),

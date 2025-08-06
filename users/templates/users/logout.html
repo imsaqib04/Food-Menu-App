@@ -1,1 +1,16 @@
-<h1> logout succesfully</h1>
+{% extends "food/base.html" %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-success text-center shadow-sm" role="alert">
+                <h4 class="alert-heading">Logged Out Successfully!</h4>
+                <p>You have been logged out of your account.</p>
+                <hr>
+                <a href="{% url 'login' %}" class="btn btn-primary">Login Again</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
